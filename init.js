@@ -3,23 +3,11 @@ function loadMainGame() {
     if (gamesData && gamesData.length > 0) {
         const firstGame = gamesData[0];
         const iframe = document.getElementById('game-iframe');
-        const title = document.getElementById('current-game-title');
-        const icon = document.getElementById('game-icon');
         
         if (iframe && firstGame.iframeUrl) {
             iframe.src = firstGame.iframeUrl;
         }
-        
-        if (title) {
-            title.textContent = firstGame.name || 'Game';
-        }
-        
-        if (icon && firstGame.imageUrl) {
-            icon.src = firstGame.imageUrl.replace('game_icon', 'icon');
-            icon.onerror = function() {
-                this.src = 'img/icon/veckIo.jpg';
-            };
-        }
+        // 保持标题和图标为品牌样式，不使用游戏数据覆盖
     }
 }
 
