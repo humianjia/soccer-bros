@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F52E7VZMM8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-F52E7VZMM8');
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoccerBros.io - Free Online Soccer Game | Multiplayer Browser Game</title>
+    <meta name="description" content="SoccerBros.io is a free online multiplayer soccer game where you can play with players worldwide. Experience exciting matches, score goals, and compete for the top spot on the leaderboard. Play for free on browser at https://soccerbros.gg/">
+    <meta name="keywords" content="soccerbros, soccerbros io, soccerbros.io, soccer game, multiplayer soccer, online soccer, free soccer game, browser soccer, soccer game play, soccer bros game, soccer multiplayer, soccer challenge">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="SoccerBrosIO">
+    <link rel="canonical" href="https://soccerbros.gg/">
+    <meta property="og:title" content="SoccerBros.io - Free Online Soccer Game">
+    <meta property="og:description" content="Play SoccerBros.io - A free online multiplayer soccer game. Compete with players worldwide, score goals, and climb the leaderboard!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://soccerbros.gg/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SoccerBros.io - Free Online Soccer Game">
+    <meta name="twitter:description" content="Play SoccerBros.io - A free online multiplayer soccer game. Compete with players worldwide, score goals, and climb the leaderboard!">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+    <!-- 动态背景 -->
+    <div class="ambient-bg"></div>
+    
+    <!-- 顶部导航 -->
+    <nav class="top-navigation">
+        <div class="nav-wrapper">
+            <a href="index.html" class="brand-area" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+                <div class="logo-mark">
+                    <i class="fas fa-futbol"></i>
+                </div>
+                <span class="brand-name">Soccer<span>Bros</span></span>
+            </a>
+            
+            <div class="category-menu">
+                <a href="categories.html?category=action" class="menu-link">
+                    <i class="fas fa-gamepad"></i>
+                    Action
+                </a>
+                <a href="categories.html?category=battle-royale" class="menu-link">
+                    <i class="fas fa-crosshairs"></i>
+                    Battle
+                </a>
+                <a href="categories.html?category=fps" class="menu-link">
+                    <i class="fas fa-bullseye"></i>
+                    Shooter
+                </a>
+                <a href="categories.html?category=multiplayer" class="menu-link">
+                    <i class="fas fa-users"></i>
+                    Multiplayer
+                </a>
+                <a href="categories.html?category=sniper" class="menu-link">
+                    <i class="fas fa-eye"></i>
+                    Sniper
+                </a>
+            </div>
+            
+            <div class="search-container">
+                <input type="text" placeholder="Find games..." class="search-input">
+                <button class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容区 -->
+    <main class="content-container">
+        <!-- Hero区域 -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">SoccerBros.io</h1>
+                <p class="hero-subtitle">Free Online Multiplayer Soccer Game - Play with Players Worldwide</p>
+            </div>
+        </section>
+
+        <!-- 主内容布局 - 含侧边栏 -->
+        <div class="main-layout">
+            <!-- 左侧广告位 -->
+            <aside class="sidebar-ad left-ad">
+                <div class="ad-placeholder"></div>
+            </aside>
+
+            <!-- 中间内容区 -->
+            <div class="main-content-area">
+                <!-- 游戏播放器区 -->
+                <section class="game-player-section">
+                    <div class="player-card">
+                        <div class="player-window">
+                            <iframe id="game-iframe" src="" allowfullscreen></iframe>
+                        </div>
+                        <div class="player-bar">
+                            <div class="current-game">
+                                <div class="game-thumb">
+                                    <img src="" id="game-icon" alt="">
+                                </div>
+                                <div class="game-details">
+                                    <h2 class="game-name" id="current-game-title">Gummy merge</h2>
+                                </div>
+                            </div>
+                            <div class="player-actions">
+                                <button class="action-btn fullscreen-btn" onclick="toggleFullscreen()">
+                                    <i class="fas fa-futbol"></i>
+                                    <span>Fullscreen</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- iframe下方广告位 -->
+                <section class="bottom-ad-section">
+                    <div class="bottom-ad">
+                        <div class="ad-placeholder horizontal"></div>
+                    </div>
+                </section>
+
+                <!-- 游戏推荐区 -->
+                <section class="featured-games">
+                    <div class="section-header">
+                        <i class="fas fa-fire"></i>
+                        <h3 class="section-heading">Popular Games</h3>
+                    </div>
+                    <div class="games-collection" id="related-games-container">
+                        <!-- 游戏卡片将动态生成 -->
+                    </div>
+                </section>
+
+                <!-- 游戏介绍 -->
+                <section class="game-info-section">
+                    <div class="info-card">
+                        <div class="info-banner">
+                            <i class="fas fa-futbol"></i>
+                            Welcome to SoccerBros.io - A free online multiplayer soccer game where you compete with players worldwide
+                        </div>
+                        <div class="info-content-block">
+                            <h2 class="block-title">About The Game</h2>
+                            <p><strong>SoccerBros.io</strong> is a free online multiplayer soccer game where you can play with players from around the world. Step onto the virtual pitch, show off your skills, and compete to score the most goals. Whether you're playing casually or fighting for the top spot on the leaderboard, every match is an exciting challenge.</p>
+                            <p>As a <strong>browser-based soccer game</strong>, SoccerBros.io offers instant gameplay with no downloads required. Challenge opponents in real-time matches, master your dribbling and shooting techniques, and become the ultimate soccer champion. Play at <a href="https://soccerbros.gg/" target="_blank">https://soccerbros.gg/</a></p>
+
+                            <h3 class="subheading">Gameplay Features</h3>
+                            <ul>
+                                <li><strong>Multiplayer Matches:</strong> Play with and against real players from around the world in real-time</li>
+                                <li><strong>Skill-Based Gameplay:</strong> Master dribbling, passing, and shooting to outplay your opponents</li>
+                                <li><strong>Leaderboards:</strong> Climb the ranks and become the top soccer player on the global leaderboard</li>
+                                <li><strong>Instant Play:</strong> No downloads or installations required - play directly in your browser</li>
+                                <li><strong>Cross-Platform:</strong> Works on desktop, tablet, and mobile devices</li>
+                            </ul>
+
+                            <h3 class="subheading">How to Play</h3>
+                            <ul>
+                                <li><strong>Move:</strong> Use arrow keys or WASD to control your player</li>
+                                <li><strong>Shoot:</strong> Press space or click to kick the ball toward the goal</li>
+                                <li><strong>Pass:</strong> Use passing to move the ball to teammates</li>
+                                <li><strong>Defend:</strong> Position yourself to intercept opponent passes and block shots</li>
+                            </ul>
+
+                            <h3 class="subheading">Key Features</h3>
+                            <ul>
+                                <li><strong>Free to Play:</strong> Enjoy unlimited soccer action at no cost</li>
+                                <li><strong>Real-Time Multiplayer:</strong> Compete against players worldwide in live matches</li>
+                                <li><strong>Exciting Matches:</strong> Fast-paced gameplay with action-packed soccer moments</li>
+                                <li><strong>Skill Development:</strong> Improve your soccer skills with every game you play</li>
+                            </ul>
+                        </div>
+                        <div class="tags-display">
+                            <span class="game-tag">
+                                <i class="fas fa-futbol"></i> Soccer
+                            </span>
+                            <span class="game-tag">
+                                <i class="fas fa-trophy"></i> Multiplayer
+                            </span>
+                            <span class="game-tag">
+                                <i class="fas fa-globe"></i> Global
+                            </span>
+                            <span class="game-tag">
+                                <i class="fas fa-crown"></i> Leaderboard
+                            </span>
+                            <span class="game-tag">
+                                <i class="fas fa-gamepad"></i> Sports
+                            </span>
+                            <span class="game-tag">
+                                <i class="fas fa-mobile-alt"></i> Cross-Platform
+                            </span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- 右侧广告位 -->
+            <aside class="sidebar-ad right-ad">
+                <div class="ad-placeholder"></div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="site-footer">
+        <div class="footer-wrapper">
+            <div class="footer-nav">
+                <a href="index.html" class="footer-link">About</a>
+                <a href="contact.html" class="footer-link">Contact</a>
+                <a href="contact.html" class="footer-link">DMCA</a>
+                <a href="privacy-policy.html" class="footer-link">Privacy</a>
+                <a href="terms-of-service.html" class="footer-link">Terms</a>
+                <a href="cookie-policy.html" class="footer-link">Cookies</a>
+            </div>
+            <p class="copyright-text">© 2024 SoccerBros.io - Free Online Soccer Games. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- 游戏数据 -->
+    <script src="js/game_data/games.js"></script>
+    <script src="js/game_data/action.js"></script>
+    <script src="js/game_data/battleRoyale.js"></script>
+    <script src="js/game_data/fps.js"></script>
+    <script src="js/game_data/multiplayer.js"></script>
+    <script src="js/game_data/sniper.js"></script>
+    <!-- 主脚本 -->
+    <script src="init.js"></script>
+</body>
+</html>

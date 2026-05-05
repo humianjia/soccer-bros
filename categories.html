@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F52E7VZMM8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-F52E7VZMM8');
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Categories - SoccerBros.io | Free Online Soccer Game</title>
+    <meta name="description" content="Browse all game categories at SoccerBros.io - Action, Battle Royale, FPS, Multiplayer, Sniper games and more!">
+    <meta name="keywords" content="soccerbros io, game categories, io games, action games, battle royale games, fps games, multiplayer games, sniper games">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="SoccerBrosIO">
+    <link rel="canonical" href="https://soccerbros.gg/categories">
+    <meta property="og:title" content="Game Categories - SoccerBros.io">
+    <meta property="og:description" content="Browse all game categories - Action, Battle Royale, FPS, Multiplayer, Sniper games and more!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://soccerbros.gg/categories">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+    <div class="ambient-bg"></div>
+
+    <nav class="top-navigation">
+        <div class="nav-wrapper">
+            <a href="index.html" class="brand-area" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+                <div class="logo-mark">
+                    <i class="fas fa-futbol"></i>
+                </div>
+                <span class="brand-name">Soccer<span>Bros</span></span>
+            </a>
+
+            <div class="category-menu">
+                <a href="categories.html?category=action" class="menu-link">
+                    <i class="fas fa-gamepad"></i>
+                    Action
+                </a>
+                <a href="categories.html?category=battle-royale" class="menu-link">
+                    <i class="fas fa-crosshairs"></i>
+                    Battle
+                </a>
+                <a href="categories.html?category=fps" class="menu-link">
+                    <i class="fas fa-bullseye"></i>
+                    Shooter
+                </a>
+                <a href="categories.html?category=multiplayer" class="menu-link">
+                    <i class="fas fa-users"></i>
+                    Multiplayer
+                </a>
+                <a href="categories.html?category=sniper" class="menu-link">
+                    <i class="fas fa-eye"></i>
+                    Sniper
+                </a>
+            </div>
+
+            <div class="search-container">
+                <input type="text" placeholder="Find games..." class="search-input">
+                <button class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="content-container">
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Game Categories</h1>
+                <p class="hero-subtitle">Explore our collection of free online games</p>
+            </div>
+        </section>
+
+        <div class="main-layout">
+            <aside class="sidebar-ad left-ad">
+                <div class="ad-placeholder"></div>
+            </aside>
+
+            <div class="main-content-area">
+                <section class="featured-games">
+                    <div class="section-header">
+                        <i class="fas fa-gamepad"></i>
+                        <h3 class="section-heading" id="games-section-title">All Games</h3>
+                    </div>
+                    <div class="games-collection" id="games-list-container" style="grid-template-columns: repeat(5, 1fr);">
+                    </div>
+                </section>
+
+                <section class="bottom-ad-section">
+                    <div class="bottom-ad">
+                        <div class="ad-placeholder horizontal"></div>
+                    </div>
+                </section>
+            </div>
+
+            <aside class="sidebar-ad right-ad">
+                <div class="ad-placeholder"></div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-wrapper">
+            <div class="footer-nav">
+                <a href="index.html" class="footer-link">About</a>
+                <a href="contact.html" class="footer-link">Contact</a>
+                <a href="contact.html" class="footer-link">DMCA</a>
+                <a href="privacy-policy.html" class="footer-link">Privacy</a>
+                <a href="terms-of-service.html" class="footer-link">Terms</a>
+                <a href="cookie-policy.html" class="footer-link">Cookies</a>
+            </div>
+            <p class="copyright-text">© 2024 SoccerBros.io - Free Online Soccer Games. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/game_data/games.js"></script>
+    <script src="js/game_data/action.js"></script>
+    <script src="js/game_data/battleRoyale.js"></script>
+    <script src="js/game_data/fps.js"></script>
+    <script src="js/game_data/multiplayer.js"></script>
+    <script src="js/game_data/sniper.js"></script>
+    <script>
+        function getURLParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        const categories = {
+            'all': 'All Games',
+            'action': 'Action',
+            'fps': 'FPS',
+            'battle-royale': 'Battle',
+            'sniper': 'Sniper',
+            'multiplayer': 'Multiplayer'
+        };
+
+        const categoryDataMap = {
+            'all': [...(window.gamesData || []), ...(window.actionGames || []), ...(window.battleRoyaleData || []), ...(window.fpsData || []), ...(window.multiplayerGames || []), ...(window.sniperData || [])],
+            'action': window.actionGames || [],
+            'fps': window.fpsData || [],
+            'battle-royale': window.battleRoyaleData || [],
+            'sniper': window.sniperData || [],
+            'multiplayer': window.multiplayerGames || []
+        };
+
+        function highlightCurrentCategory() {
+            const currentCategory = getURLParam('category') || 'all';
+            const navItems = document.querySelectorAll('.menu-link');
+            navItems.forEach(item => {
+                const href = item.getAttribute('href');
+                if (href.includes(`category=${currentCategory}`)) {
+                    item.style.color = '#f59e0b';
+                    item.style.background = 'rgba(245, 158, 11, 0.12)';
+                }
+            });
+        }
+
+        function loadGamesByCategory() {
+            const container = document.getElementById('games-list-container');
+            const titleElement = document.getElementById('games-section-title');
+            if (!container || !titleElement) return;
+
+            const currentCategory = getURLParam('category') || 'all';
+            const categoryName = categories[currentCategory] || 'All Games';
+            titleElement.textContent = categoryName;
+
+            const allGames = categoryDataMap[currentCategory] || [];
+            container.innerHTML = '';
+
+            allGames.forEach((game) => {
+                const gameItem = document.createElement('div');
+                gameItem.className = 'game-item';
+                const imageUrl = game.imageUrl;
+                gameItem.innerHTML = `
+                    <img src="${imageUrl}" alt="${game.name}" onerror="this.src='img/icon/veckIo.jpg'">
+                    <div class="game-item-title">${game.name}</div>
+                `;
+                gameItem.addEventListener('click', function() {
+                    if (game.link) {
+                        window.location.href = game.link;
+                    } else if (window.parent.loadGame) {
+                        window.parent.loadGame(game.originalIndex || 0);
+                    } else {
+                        window.location.href = 'index.html?game=' + (game.originalIndex || 0);
+                    }
+                });
+                container.appendChild(gameItem);
+            });
+
+            highlightCurrentCategory();
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(loadGamesByCategory, 100);
+        });
+    </script>
+</body>
+</html>
