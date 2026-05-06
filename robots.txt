@@ -3,4 +3,4 @@ Allow: /
 Disallow: /js/
 Disallow: /css/
 
-Sitemap: https://soccerbros.gg/sitemap.xml
+Sitemap: https://www.soccerbros.space/sitemap.xml
