@@ -131,6 +131,28 @@
             return urlParams.get(name);
         }
 
+        function getGameBadge(game) {
+            const type = (game && (game.gameType || game.category || '')).toLowerCase();
+            if (type.includes('fps')) return 'Shoot';
+            if (type.includes('battle')) return 'Clash';
+            if (type.includes('multiplayer')) return 'Match';
+            if (type.includes('sniper')) return 'Aim';
+            if (type.includes('action')) return 'Speed';
+            if (type.includes('soccer') || type.includes('sport')) return 'Score';
+            return 'Match';
+        }
+
+        function getGameAccent(game) {
+            const type = (game && (game.gameType || game.category || '')).toLowerCase();
+            if (type.includes('fps')) return 'FPS';
+            if (type.includes('battle')) return 'Battle';
+            if (type.includes('multiplayer')) return 'Team';
+            if (type.includes('sniper')) return 'Focus';
+            if (type.includes('action')) return 'Rush';
+            if (type.includes('soccer') || type.includes('sport')) return 'Goal';
+            return 'Play';
+        }
+
         const categories = {
             'all': 'All Games',
             'action': 'Action',
@@ -178,6 +200,8 @@
                 gameItem.className = 'game-item';
                 const imageUrl = game.imageUrl;
                 gameItem.innerHTML = `
+                    <span class="game-item-badge">${getGameBadge(game)}</span>
+                    <span class="game-item-accent">${getGameAccent(game)}</span>
                     <img src="${imageUrl}" alt="${game.name}" onerror="this.src='img/icon/veckIo.jpg'">
                     <div class="game-item-title">${game.name}</div>
                 `;
@@ -191,9 +215,15 @@
                     }
                 });
                 container.appendChild(gameItem);
+                requestAnimationFrame(() => {
+                    gameItem.style.opacity = '1';
+                    gameItem.style.transform = 'translateY(0)';
+                });
             });
 
             highlightCurrentCategory();
+            const heading = document.getElementById('games-section-title');
+            if (heading) heading.classList.add('is-live');
         }
 
         document.addEventListener('DOMContentLoaded', function() {

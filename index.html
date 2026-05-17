@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/css.css">
 </head>
-<body>
+<body class="home-page">
     <!-- 动态背景 -->
     <div class="ambient-bg"></div>
     
@@ -81,10 +81,33 @@
     <!-- 主要内容区 -->
     <main class="content-container">
         <!-- Hero区域 -->
-        <section class="hero-section">
-            <div class="hero-content">
+        <section class="hero-section hero-section--home">
+            <div class="hero-stage" aria-hidden="true">
+                <span class="hero-stage__glow hero-stage__glow--left"></span>
+                <span class="hero-stage__glow hero-stage__glow--right"></span>
+                <span class="hero-stage__line hero-stage__line--center"></span>
+                <span class="hero-stage__line hero-stage__line--arc"></span>
+                <span class="hero-stage__grain"></span>
+            </div>
+            <div class="hero-content hero-content--home">
+                <p class="hero-kicker">Kickoff • Live Arena • Goal Rush</p>
                 <h1 class="hero-title">SoccerBros</h1>
                 <p class="hero-subtitle">Free Online Multiplayer Soccer Game - Play with Players Worldwide</p>
+                <div class="hero-actions">
+                    <a class="action-btn action-btn--hero" href="#game-player">
+                        <i class="fas fa-play"></i>
+                        <span>Start Match</span>
+                    </a>
+                    <a class="action-btn action-btn--ghost action-btn--hero" href="categories.html">
+                        <i class="fas fa-layer-group"></i>
+                        <span>Browse Leagues</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <span class="hero-stat"><i class="fas fa-bolt"></i> Fast Pace</span>
+                    <span class="hero-stat"><i class="fas fa-futbol"></i> Green Pitch</span>
+                    <span class="hero-stat"><i class="fas fa-trophy"></i> Goal Moments</span>
+                </div>
             </div>
         </section>
 
@@ -98,7 +121,7 @@
             <!-- 中间内容区 -->
             <div class="main-content-area">
                 <!-- 游戏播放器区 -->
-                <section class="game-player-section">
+                <section class="game-player-section" id="game-player">
                     <div class="player-card">
                         <div class="player-window">
                             <iframe id="game-iframe" src="" allowfullscreen></iframe>
@@ -116,7 +139,7 @@
                             </div>
                             <div class="player-actions">
                                 <button class="action-btn fullscreen-btn" onclick="toggleFullscreen()">
-                                    <i class="fas fa-futbol"></i>
+                                    <i class="fas fa-expand"></i>
                                     <span>Fullscreen</span>
                                 </button>
                             </div>
